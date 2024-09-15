@@ -22,11 +22,13 @@ After booking, users can view the details of their booking (movie title, showtim
 OOP Concepts:
 
 1.Classes & Objects:
-The system will include a Movie class that contains attributes like title, genre, and showtime. Each movie will be an object of this class.
-A Booking class will represent the booking details, such as the movie, showtime, and the number of tickets booked. Each booking will be an object of this class.
-This Operator:
-The this operator will be used within the class methods to refer to the current movie or booking object, especially when updating or displaying details.
-Array of Objects:
-An array of Movie objects will store the available movies in the system. This array will allow users to browse through and select from multiple movies.
-Similarly, an array of Booking objects will store multiple user bookings, allowing users to view their booking history.
+->The system will include a Movie class that contains attributes like title, genre, and showtime. Each movie will be an object of this class.
+->A Booking class will represent the booking details, such as the movie, showtime, and the number of tickets booked. Each booking will be an object of this class.
+
+2.This Operator:
+->The this operator will be used within the class methods to refer to the current movie or booking object, especially when updating or displaying details.
+
+3.Array of Objects:
+->An array of Movie objects will store the available movies in the system. This array will allow users to browse through and select from multiple movies.
+->Similarly, an array of Booking objects will store multiple user bookings, allowing users to view their booking history.
 
