@@ -1,22 +1,25 @@
 public class App {
     public static void main(String[] args) {
-        Movie movie1 = new Movie();
-        movie1.setDetails("Inception", "Sci-Fi", "7:00 PM");
+        Movie[] movies = new Movie[3];
 
-        Movie movie2 = new Movie();
-        movie2.setDetails("Titanic", "Romance", "9:00 PM");
+        movies[0] = new Movie();
+        movies[0].setDetails("Inception", "Sci-Fi", "7:00 PM");
 
-        movie1.showObjectCreated();
-        movie2.showObjectCreated();
+        movies[1] = new Movie();
+        movies[1].setDetails("Titanic", "Romance", "9:00 PM");
+
+        movies[2] = new Movie();
+        movies[2].setDetails("Avatar", "Fantasy", "5:00 PM");
 
         System.out.println("\nAvailable Movies:");
-        movie1.displayDetails();
-        System.out.println();
-        movie2.displayDetails();
+        for (Movie movie : movies) {
+            movie.displayDetails();
+            System.out.println();
+        }
 
         Booking booking = new Booking();
         
-        booking.bookTicket(movie1, 3);
+        booking.bookTicket(movies[1], 4);
 
         System.out.println("\nYour Booking:");
         booking.displayBookingDetails();
