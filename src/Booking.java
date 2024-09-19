@@ -1,5 +1,5 @@
 public class Booking {
-    Movie movie;          
+    Movie movie;         
     int numberOfTickets;   
 
     public void bookTicket(Movie movie, int numberOfTickets) {
