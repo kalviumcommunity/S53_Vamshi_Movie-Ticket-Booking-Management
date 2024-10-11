@@ -1,10 +1,12 @@
 public class Booking {
-    Movie movie;         
-    int numberOfTickets;   
+    Movie movie;
+    int numberOfTickets;
+    static int totalTicketsBooked = 0;  // Static variable to track total tickets booked
 
     public void bookTicket(Movie movie, int numberOfTickets) {
-        this.movie = movie; 
-        this.numberOfTickets = numberOfTickets; 
+        this.movie = movie;  
+        this.numberOfTickets = numberOfTickets;
+        totalTicketsBooked += numberOfTickets;  // Increment total tickets booked
     }
 
     public void displayBookingDetails() {

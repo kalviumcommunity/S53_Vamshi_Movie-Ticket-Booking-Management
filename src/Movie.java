@@ -2,6 +2,11 @@ public class Movie {
     String title;
     String genre;
     String showtime;
+    static int movieCount = 0;  // Static variable to track the number of movies created
+
+    public Movie() {
+        movieCount++;  // Increment movie count when a new movie is created
+    }
 
     public void setDetails(String title, String genre, String showtime) {
         this.title = title;
@@ -13,9 +18,5 @@ public class Movie {
         System.out.println("Movie Title: " + this.title);
         System.out.println("Genre: " + this.genre);
         System.out.println("Showtime: " + this.showtime);
-    }
-
-    public void showObjectCreated() {
-        System.out.println("A Movie object has been created.");
     }
 }
