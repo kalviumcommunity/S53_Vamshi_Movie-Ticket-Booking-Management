@@ -23,5 +23,8 @@ public class App {
 
         System.out.println("\nYour Booking:");
         booking.displayBookingDetails();
+
+        System.out.println("\nTotal Movies Created: " + Movie.movieCount);
+        System.out.println("Total Tickets Booked: " + Booking.totalTicketsBooked);
     }
 }
