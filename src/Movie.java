@@ -19,4 +19,9 @@ public class Movie {
         System.out.println("Genre: " + this.genre);
         System.out.println("Showtime: " + this.showtime);
     }
+
+    // Static member function to get total movie count
+    public static int getTotalMovies() {
+        return movieCount;  // Accessing the static variable movieCount
+    }
 }
