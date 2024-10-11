@@ -23,7 +23,8 @@ public class App {
         System.out.println("\nYour Booking:");
         booking.displayBookingDetails();
 
-        System.out.println("\nTotal Movies Created: " + Movie.movieCount);
-        System.out.println("Total Tickets Booked: " + Booking.totalTicketsBooked);
+        // Using static methods to display total movies and tickets booked
+        System.out.println("\nTotal Movies Created: " + Movie.getTotalMovies());
+        System.out.println("Total Tickets Booked: " + Booking.getTotalTicketsBooked());
     }
 }
