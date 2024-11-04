@@ -1,22 +1,34 @@
 public class Booking {
-    Movie movie;         
-    int numberOfTickets;
-    static int totalTicketsBooked = 0;  // Static variable to track total tickets booked
+    private Movie movie;         
+    private int numberOfTickets;
+    private static int totalTicketsBooked = 0;  
 
-    public void bookTicket(Movie movie, int numberOfTickets) {
-        this.movie = movie;  
+    // Accessor and Mutator for movie
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
+    // Accessor and Mutator for numberOfTickets
+    public int getNumberOfTickets() {
+        return numberOfTickets;
+    }
+
+    public void setNumberOfTickets(int numberOfTickets) {
         this.numberOfTickets = numberOfTickets;
-        totalTicketsBooked += numberOfTickets;  // Increment total tickets booked
+        totalTicketsBooked += numberOfTickets; 
     }
 
     public void displayBookingDetails() {
-        System.out.println("Booking Confirmed for: " + this.movie.title);
-        System.out.println("Showtime: " + this.movie.showtime);
+        System.out.println("Booking Confirmed for: " + this.movie.getTitle());
+        System.out.println("Showtime: " + this.movie.getShowtime());
         System.out.println("Number of Tickets: " + this.numberOfTickets);
     }
 
-    // Static member function to get total tickets booked
     public static int getTotalTicketsBooked() {
-        return totalTicketsBooked;  // Accessing the static variable totalTicketsBooked
+        return totalTicketsBooked;
     }
 }
