@@ -24,7 +24,7 @@ public class App {
         System.out.println("\nYour Booking:");
         booking.displayBookingDetails();
 
-        System.out.println("\nTotal Movies Created: " + Movie.getTotalMovies());
+        System.out.println("\nTotal Movies: " + Movie.getTotalMovies());
         System.out.println("Total Tickets Booked: " + Booking.getTotalTicketsBooked());
     }
 }

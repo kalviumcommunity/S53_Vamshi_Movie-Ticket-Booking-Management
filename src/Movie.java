@@ -1,8 +1,8 @@
 public class Movie {
-    private String title;
-    private String genre;
-    private String showtime;
-    private static int movieCount = 0;
+    private String title;      
+    private String genre;      
+    private String showtime;  
+    private static int movieCount = 0; 
 
     public Movie() {
         movieCount++;

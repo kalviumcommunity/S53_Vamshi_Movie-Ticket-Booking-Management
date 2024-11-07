@@ -1,8 +1,8 @@
 public class Booking {
-    private Movie movie;         
-    private int numberOfTickets;
+    private Movie movie;          
+    private int numberOfTickets;  
     private static int totalTicketsBooked = 0;  
-
+    
     public Movie getMovie() {
         return movie;
     }
