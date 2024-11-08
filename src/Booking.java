@@ -1,8 +1,16 @@
 public class Booking {
-    private Movie movie;          
-    private int numberOfTickets;  
-    private static int totalTicketsBooked = 0;  
-    
+    private Movie movie;         
+    private int numberOfTickets;
+    private static int totalTicketsBooked = 0;
+
+    public Booking() {}
+
+    public Booking(Movie movie, int numberOfTickets) {
+        this.movie = movie;
+        this.numberOfTickets = numberOfTickets;
+        totalTicketsBooked += numberOfTickets;
+    }
+
     public Movie getMovie() {
         return movie;
     }
@@ -17,7 +25,7 @@ public class Booking {
 
     public void setNumberOfTickets(int numberOfTickets) {
         this.numberOfTickets = numberOfTickets;
-        totalTicketsBooked += numberOfTickets; 
+        totalTicketsBooked += numberOfTickets;
     }
 
     public void displayBookingDetails() {
