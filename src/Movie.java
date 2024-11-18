@@ -1,10 +1,19 @@
 public class Movie {
-    private String title;      
-    private String genre;      
-    private String showtime;  
-    private static int movieCount = 0; 
+    private String title;
+    private String genre;
+    private String showtime;
+    private static int movieCount = 0;
 
+    // Default constructor
     public Movie() {
+        movieCount++;
+    }
+
+    // Parameterized constructor
+    public Movie(String title, String genre, String showtime) {
+        this.title = title;
+        this.genre = genre;
+        this.showtime = showtime;
         movieCount++;
     }
 
