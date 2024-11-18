@@ -1,10 +1,9 @@
 public class App {
     public static void main(String[] args) {
-        Movie movie1 = new Movie();
-        movie1.setDetails("Inception", "Sci-Fi", "7:00 PM");
-
-        Movie movie2 = new Movie("Titanic", "Romance", "9:00 PM");
-        Movie movie3 = new Movie("Avatar", "Fantasy", "5:00 PM");
+        // Using default constructor and setting details later
+        Movie movie1 = new Movie("Inception", "Sci-Fi", "7:00 PM");
+        PremiumMovie movie2 = new PremiumMovie("Titanic", "Romance", "9:00 PM", 15.99);
+        PremiumMovie movie3 = new PremiumMovie("Avatar", "Fantasy", "5:00 PM", 18.50);
 
         System.out.println("\nAvailable Movies:");
         movie1.displayDetails();
@@ -13,11 +12,11 @@ public class App {
         System.out.println();
         movie3.displayDetails();
 
-        Booking booking1 = new Booking();
-        booking1.setMovie(movie2);
-        booking1.setNumberOfTickets(4);
+        // Regular Booking
+        Booking booking1 = new Booking(movie1, 3);
 
-        Booking booking2 = new Booking(movie3, 2);
+        // Special Offer Booking
+        SpecialOfferBooking booking2 = new SpecialOfferBooking(movie3, 2, 5.00);
 
         System.out.println("\nYour Bookings:");
         booking1.displayBookingDetails();

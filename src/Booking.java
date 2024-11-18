@@ -1,10 +1,12 @@
 public class Booking {
-    private Movie movie;         
+    private Movie movie;
     private int numberOfTickets;
     private static int totalTicketsBooked = 0;
 
+    // Default constructor
     public Booking() {}
 
+    // Parameterized constructor
     public Booking(Movie movie, int numberOfTickets) {
         this.movie = movie;
         this.numberOfTickets = numberOfTickets;
