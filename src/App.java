@@ -1,23 +1,29 @@
 public class App {
     public static void main(String[] args) {
-        // Using Default Constructor
-        Movie[] movies = new Movie[3];
-        movies[0] = new Movie();
-        movies[0].setDetails("Inception", "Sci-Fi", "7:00 PM");
+        // Creating movie objects
+        Movie premiumMovie = new PremiumMovie("Inception", "Sci-Fi", "7:00 PM", 15.99);
+        Movie specialOfferMovie = new SpecialOfferMovie("Titanic", "Romance", "9:00 PM", 5.00);
 
-        // Using Overloaded Constructor
-        movies[1] = new Movie("Titanic", "Romance", "9:00 PM");
+        // Display movie details and generate tickets
+        System.out.println("Premium Movie Details:");
+        premiumMovie.displayDetails();
+        premiumMovie.generateTicket();
+        System.out.println();
 
-        // Using Overloaded Method
-        movies[2] = new Movie();
-        movies[2].setDetails("Avatar", "Fantasy");
+        System.out.println("Special Offer Movie Details:");
+        specialOfferMovie.displayDetails();
+        specialOfferMovie.generateTicket();
+        System.out.println();
 
-        System.out.println("\nAvailable Movies:");
-        for (Movie movie : movies) {
-            movie.displayDetails();
-            System.out.println();
-        }
+        Booking booking1 = new Booking("T123", premiumMovie, 2);
+        Booking booking2 = new Booking("T124", specialOfferMovie, 3);
 
-        System.out.println("Total Movies Created: " + Movie.getTotalMovies());
+        System.out.println("\nBooking Details:");
+        booking1.printTicketDetails();
+        System.out.println();
+        booking2.printTicketDetails();
+
+        System.out.println("\nTotal Movies Created: " + Movie.getTotalMovies());
+        System.out.println("Total Tickets Booked: " + Booking.getTotalTicketsBooked());
     }
 }

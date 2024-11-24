@@ -2,7 +2,7 @@ public class PremiumMovie extends Movie {
     private double ticketPrice;
 
     public PremiumMovie(String title, String genre, String showtime, double ticketPrice) {
-        super(title, genre, showtime); // Call parent constructor
+        super(title, genre, showtime); 
         this.ticketPrice = ticketPrice;
     }
 
@@ -10,13 +10,15 @@ public class PremiumMovie extends Movie {
         return ticketPrice;
     }
 
-    public void setTicketPrice(double ticketPrice) {
-        this.ticketPrice = ticketPrice;
+    @Override
+    public void generateTicket() {
+        System.out.println("Generating ticket for premium movie: " + getTitle());
+        System.out.println("Price per ticket: $" + ticketPrice);
     }
 
     @Override
     public void displayDetails() {
-        super.displayDetails(); // Call parent method
-        System.out.println("Ticket Price: $" + ticketPrice);
+        super.displayDetails();
+        System.out.println("Premium Ticket Price: $" + ticketPrice);
     }
 }
