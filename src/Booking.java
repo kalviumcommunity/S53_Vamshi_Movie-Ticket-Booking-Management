@@ -1,13 +1,10 @@
-public class Booking {
+public class Booking extends AbstractTicket {
     private Movie movie;
     private int numberOfTickets;
     private static int totalTicketsBooked = 0;
 
-    // Default constructor
-    public Booking() {}
-
-    // Parameterized constructor
-    public Booking(Movie movie, int numberOfTickets) {
+    public Booking(String ticketID, Movie movie, int numberOfTickets) {
+        super(ticketID);
         this.movie = movie;
         this.numberOfTickets = numberOfTickets;
         totalTicketsBooked += numberOfTickets;
@@ -17,26 +14,19 @@ public class Booking {
         return movie;
     }
 
-    public void setMovie(Movie movie) {
-        this.movie = movie;
-    }
-
     public int getNumberOfTickets() {
         return numberOfTickets;
     }
 
-    public void setNumberOfTickets(int numberOfTickets) {
-        this.numberOfTickets = numberOfTickets;
-        totalTicketsBooked += numberOfTickets;
-    }
-
-    public void displayBookingDetails() {
-        System.out.println("Booking Confirmed for: " + this.movie.getTitle());
-        System.out.println("Showtime: " + this.movie.getShowtime());
-        System.out.println("Number of Tickets: " + this.numberOfTickets);
-    }
-
     public static int getTotalTicketsBooked() {
         return totalTicketsBooked;
+    }
+
+    @Override
+    public void printTicketDetails() {
+        System.out.println("Ticket ID: " + getTicketID());
+        System.out.println("Movie: " + movie.getTitle());
+        System.out.println("Showtime: " + movie.getShowtime());
+        System.out.println("Number of Tickets: " + numberOfTickets);
     }
 }
