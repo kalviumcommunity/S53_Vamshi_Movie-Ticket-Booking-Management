@@ -3,13 +3,15 @@ public class Booking extends AbstractTicket {
     private int numberOfTickets;
     private static int totalTicketsBooked = 0; // Static variable to track total tickets booked
 
+    // Constructor
     public Booking(String ticketID, Movie movie, int numberOfTickets) {
         super(ticketID);
         this.movie = movie;
         this.numberOfTickets = numberOfTickets;
-        totalTicketsBooked += numberOfTickets; // Update total tickets booked
+        totalTicketsBooked += numberOfTickets;
     }
 
+    // Getters
     public Movie getMovie() {
         return movie;
     }
@@ -18,11 +20,12 @@ public class Booking extends AbstractTicket {
         return numberOfTickets;
     }
 
-    // Static method to return total tickets booked
+    // Static method to get the total number of tickets booked
     public static int getTotalTicketsBooked() {
         return totalTicketsBooked;
     }
 
+    // Override method to print ticket details
     @Override
     public void printTicketDetails() {
         System.out.println("Ticket ID: " + getTicketID());

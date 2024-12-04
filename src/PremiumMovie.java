@@ -1,8 +1,8 @@
-public class PremiumMovie extends Movie {
+public class PremiumMovie extends Movie implements TicketGenerator {
     private double ticketPrice;
 
     public PremiumMovie(String title, String genre, String showtime, double ticketPrice) {
-        super(title, genre, showtime); 
+        super(title, genre, showtime);
         this.ticketPrice = ticketPrice;
     }
 
@@ -14,11 +14,5 @@ public class PremiumMovie extends Movie {
     public void generateTicket() {
         System.out.println("Generating ticket for premium movie: " + getTitle());
         System.out.println("Price per ticket: $" + ticketPrice);
-    }
-
-    @Override
-    public void displayDetails() {
-        super.displayDetails();
-        System.out.println("Premium Ticket Price: $" + ticketPrice);
     }
 }
